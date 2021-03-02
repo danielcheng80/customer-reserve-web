@@ -2,6 +2,39 @@
 
 A business tool for dealers to reserve their rights on specified customers.
 
+## Development
+
+### Leverage Docker
+
+#### Basic Usages
+
+```bash
+# Run the container `node` in background mode
+./launch.sh
+
+# Enter the container
+docker exec -it "$(cat service.txt)" bash
+
+# Install dependencies (required after `git clone` or `package.json` is updated)
+yarn
+
+# Run web server (dev)
+yarn start
+
+# Terminate the container
+./stop.sh
+```
+
+#### Advanced Usages
+
+```bash
+# Launch web server directly.
+./launch.sh yarn start
+
+# In container, you can run web server in background mode
+yarn start &
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
